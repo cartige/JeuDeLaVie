@@ -1,0 +1,11 @@
+#rules-form{
+    width: 400;
+    height: 500;
+    text-align: left;
+    margin-left: 30%;
+    margin-top: 15%;
+}
+
+form{
+    display: block;
+}
