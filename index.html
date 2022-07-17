@@ -11,25 +11,31 @@
         <h3>Generation: 0 / Nombre de cellules vivantes: 0</h3>
         <br>
         <label for="motif" id="choix-motif">Remplir la grille: </label>
-        <select id="motif" name="motif">
-            <option value="motif1">Motif 1</option>
-            <option value="motif2">Motif 2</option>
-            <option value="motif3">Motif 3</option>
-            <option value="motif4">Motif 4</option>
-        </select>
+        <div class="line">
+            <select id="motif" name="motif">
+                <option value="motif1">Motif 1</option>
+                <option value="motif2">Motif 2</option>
+                <option value="motif3">Motif 3</option>
+                <option value="motif4">Motif 4</option>
+            </select>
+        </div>
+
         <br>
+        <div class="line">
+            <label for="dimension" id="dim-grille">Redimensionner la grille: </label>
+            <p><input type="number" id="dimension" name="dimension" min="0" max="30">x<input type="number" id="dimension" name="dimension" min="0" max="30"></p>
+            <button type="submit" value="Ok" form="dim-grille">Ok</button>
+        </div>
         <br>
-        <label for="dimension" id="dim-grille">Redimensionner la grille: </label>
-        <p><input type="number" id="dimension" name="dimension" min="0" max="30">x<input type="number" id="dimension" name="dimension" min="0" max="30"></p>
-        <button type="submit" value="Ok" form="dim-grille">Ok</button>
-        <br>
-        <label for="evolution" id="evolution">Evolution: </label>
-        <button type="submit" value="Suivant" name="evolution">SUIVANT</button>
-        <button type="submit" value="Lecture" name="evolution">LECTURE</button>
-        <button type="submit" value="Avance Rapide" name="evolution">AVANCE RAPIDE</button>
-        <button type="submit" value="Vitesse Max" name="evolution">VITESSE MAX</button>
-        <button type="submit" value="Pause" name="evolution">PAUSE</button>
-        <button type="submit" value="Sauvergarder" name="evolution">SAUVERGARDER</button>
+        <div class="line">
+            <label for="evolution" id="evolution">Evolution: </label>
+            <button type="submit" value="Suivant" name="evolution">SUIVANT</button>
+            <button type="submit" value="Lecture" name="evolution">LECTURE</button>
+            <button type="submit" value="Avance Rapide" name="evolution">AVANCE RAPIDE</button>
+            <button type="submit" value="Vitesse Max" name="evolution">VITESSE MAX</button>
+            <button type="submit" value="Pause" name="evolution">PAUSE</button>
+            <button type="submit" value="Sauvergarder" name="evolution">SAUVERGARDER</button>
+        </div>
         <br>
         <h3>Choisir les règles:</h3>
         <label for="d-cel">Combien de cellules en vie faut-il autour d'une cellule morte pour qu'elle prenne vie ?</label>
