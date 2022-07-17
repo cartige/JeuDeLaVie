@@ -1,11 +1,16 @@
-#rules-form{
-    width: 400;
-    height: 500;
-    text-align: left;
-    margin-left: 30%;
-    margin-top: 15%;
+#menu{
+    width: max-content;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
 }
 
-form{
-    display: block;
+h3{
+    width: auto;
+    height: auto;
+    border-style: double;
+    border-width: 2px;
 }

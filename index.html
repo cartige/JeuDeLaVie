@@ -7,12 +7,10 @@
     <title>Jeu de la Vie</title> 
 </head>
 <body>
-    <form id="rules-form">
-        <h2>Generation: 0 </h2>
-        <h2> / </h2>
-        <h2>Nombre de cellules vivantes: 0</h2>
+    <div id="menu" >
+        <h3>Generation: 0 / Nombre de cellules vivantes: 0</h3>
         <br>
-        <label for="motif">Remplir la grille: </label>
+        <label for="motif" id="choix-motif">Remplir la grille: </label>
         <select id="motif" name="motif">
             <option value="motif1">Motif 1</option>
             <option value="motif2">Motif 2</option>
@@ -20,23 +18,34 @@
             <option value="motif4">Motif 4</option>
         </select>
         <br>
+        <br>
         <label for="dimension" id="dim-grille">Redimensionner la grille: </label>
-        <input type="number" id="dimension" name="dimension" min="0" max="30">
-        <p>x</p>
-        <input type="number" id="dimension" name="dimension" min="0" max="30">
+        <p><input type="number" id="dimension" name="dimension" min="0" max="30">x<input type="number" id="dimension" name="dimension" min="0" max="30"></p>
         <button type="submit" value="Ok" form="dim-grille">Ok</button>
         <br>
         <label for="evolution" id="evolution">Evolution: </label>
-        <button type="submit" value="Suivant">SUIVANT</button>
-        <button type="submit" value="Lecture">LECTURE</button>
-        <button type="submit" value="Avance Rapide">AVANCE RAPIDE</button>
-        <button type="submit" value="Vitesse Max">VITESSE MAX</button>
-        <button type="submit" value="Pause">PAUSE</button>
-        <button type="submit" value="Sauvergarder">SAUVERGARDER</button>
+        <button type="submit" value="Suivant" name="evolution">SUIVANT</button>
+        <button type="submit" value="Lecture" name="evolution">LECTURE</button>
+        <button type="submit" value="Avance Rapide" name="evolution">AVANCE RAPIDE</button>
+        <button type="submit" value="Vitesse Max" name="evolution">VITESSE MAX</button>
+        <button type="submit" value="Pause" name="evolution">PAUSE</button>
+        <button type="submit" value="Sauvergarder" name="evolution">SAUVERGARDER</button>
         <br>
+        <h3>Choisir les règles:</h3>
+        <label for="d-cel">Combien de cellules en vie faut-il autour d'une cellule morte pour qu'elle prenne vie ?</label>
+        <input type="number" id="d-cel" name="d-cel" min="0" max="8">
+        <br>
+        <label for="l-cel">Combien de cellules en vie faut-il autour d'une cellule en vie pour qu'elle reste en vie ?</label>
+        <input type="number" id="l-cel" name="l-cel" min="0" max="8">
+        <br>
+        <label for="config" id="config">Configuration:</label>
+        <button type="submit" value="Par defaut" name="config">PAR DEFAUT</button>
+        <button type="submit" value="Variante1" name="config">VARIANTE 1</button>
+        <button type="submit" value="Variante2" name="config">VARIANTE 2</button>
+        <button type="submit" value="Variante3" name="config">VARIANTE 3</button>
 
 
-    </form>
+    </div>
 
     <script src="script.js"></script>
 </body>
