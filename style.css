@@ -1,0 +1,28 @@
+#menu{
+    width: max-content;
+    height: 450px;
+    text-align: center;
+    margin: 0 auto;
+    border: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgba(219, 155, 58, 0.774);
+    background-color: rgba(212, 163, 56, 0.671);
+}
+
+.line{
+    border-bottom: 1px;
+    border-bottom-color: black;
+    border-bottom-style: groove;
+    padding-bottom: 5px;
+}
+
+h3{
+    width: auto;
+    height: auto;
+    border-style: double;
+    border-width: 2px;
+    border-radius: 10px;
+    color: rgba(75, 68, 68, 0.795);
+    border-color: rgba(0, 0, 0, 0.541);
+}
