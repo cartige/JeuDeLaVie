@@ -1,13 +1,19 @@
 #menu{
     width: max-content;
-    height: 450px;
+    height: auto;
     text-align: center;
+    font-size: medium;
     margin: 0 auto;
     border: 3px;
     border-style: solid;
     border-radius: 5px;
     border-color: rgba(219, 155, 58, 0.774);
     background-color: rgba(212, 163, 56, 0.671);
+    position: relative;
+    margin-left: 64.5%;
+    margin-right: 35.5%;
+    margin-top: 15%; 
+    z-index: 1;
 }
 
 .line{
@@ -20,11 +26,13 @@
 h3{
     width: auto;
     height: auto;
+    font-size: medium;
     border-style: double;
     border-width: 2px;
     border-radius: 10px;
-    color: rgba(75, 68, 68, 0.795);
+    color: rgba(215, 205, 205, 0.795);
     border-color: rgba(0, 0, 0, 0.541);
+    background-color: rgba(21, 19, 19, 0.852);
 }
 
 table,
@@ -33,13 +41,18 @@ td {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   padding: 5px;
-  width: 200px;
-  height: 50px;
+  width: auto;
+  height: auto;
   margin: auto;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 7px;
   position: relative;
   top: 4px;
+  z-index: 0;
+}
+
+.alive{
+  background-color: black;
 }
 
 table {
@@ -49,8 +62,19 @@ table {
       rgba(79, 28, 161, 0.7)
     );
     border-top-right-radius: 10px;
-    position: relative;
-    top: 90px;
     padding: 2px;
     padding-bottom: 9px;
-  }
+    width: auto;
+    height: auto;
+    min-width: 99%;
+    min-height: 99%;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 0;
+}
+
+body{
+  position: fixed;
+  z-index: -1;
+  background-color: rgba(206, 148, 40, 0.929);
+}
