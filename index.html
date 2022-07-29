@@ -24,16 +24,16 @@
         <div class="line">
             <p>Redimensionner la grille:</p>            
             <p><input type="number" id="grid-width" name="grid-width" min="0" max="30">x<input type="number" id="grid-heigth" name="grid-heigth" min="0" max="30"></p>
-            <button type="submit" value="Ok" onclick="drawGrid('game-grid')">Ok</button>
+            <button type="submit" value="Ok" onclick="drawGrid()">Ok</button>
         </div>
         <br>
         <div class="line">
             <label for="evolution" id="evolution">Evolution: </label>
-            <button type="submit" value="Suivant" name="evolution" onclick="grid.computeNextGeneration() && drawGrid('game-grid')">SUIVANT</button>
-            <button type="submit" value="Lecture" name="evolution" onclick="drawGrid('game-grid')">LECTURE</button>
-            <button type="submit" value="Avance Rapide" name="evolution">AVANCE RAPIDE</button>
-            <button type="submit" value="Vitesse Max" name="evolution">VITESSE MAX</button>
-            <button type="submit" value="Pause" name="evolution">PAUSE</button>
+            <button type="submit" value="Suivant" name="evolution" id="next">SUIVANT</button>
+            <button type="submit" value="Lecture" name="evolution" id="play">LECTURE</button>
+            <button type="submit" value="Avance Rapide" name="evolution" id="fastForward">AVANCE RAPIDE</button>
+            <button type="submit" value="Vitesse Max" name="evolution" id="max">VITESSE MAX</button>
+            <button type="submit" value="Pause" name="evolution" id="pause">PAUSE</button>
             <button type="submit" value="Sauvergarder" name="evolution">SAUVERGARDER</button>
         </div>
         <br>

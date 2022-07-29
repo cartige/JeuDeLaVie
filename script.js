@@ -1,7 +1,7 @@
 class Game{
-    constructor(width, heigth, minCellToBorn, minCellToStay){
-        this.width = width;
-        this.heigth = heigth;
+    constructor(width, height, minCellToBorn, minCellToStay){
+        this._width = width;
+        this._height = height;
         // this.cells = [...Array(this.width)].map(cell => Array(this.heigth));
         this.cells = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 0, 1, 0, 1, 0, 0],
@@ -24,6 +24,12 @@ class Game{
     }
     get minCellToStay() {
         return this._minCellToStay;
+    }
+    get width() {
+        return this._width;
+    }
+    get height() {
+        return this._height;
     }
     set minCellToBorn(minCellToBorn) {
         if(minCellToBorn !== this._minCellToBorn){
