@@ -2,17 +2,17 @@ class Game{
     constructor(width, height, minCellToBorn, minCellToStay){
         this._width = width;
         this._height = height;
-        // this.cells = [...Array(this.width)].map(cell => Array(this.heigth));
-        this.cells = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                      [0, 0, 0, 0, 0, 1, 0, 1, 0, 0],
-                      [0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
-                      [1, 0, 0, 0, 0, 0, 1, 1, 0, 0],
-                      [0, 0, 1, 1, 0, 0, 0, 0, 0, 0],
-                      [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-                      [0, 0, 1, 0, 0, 0, 1, 0, 0, 0],
-                      [0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
-                      [0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-                      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+        this.cells = Array(this._height).fill().map(() => Array(this._width).fill(0));
+        // this.cells = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        //               [0, 0, 0, 0, 0, 1, 0, 1, 0, 0],
+        //               [0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+        //               [1, 0, 0, 0, 0, 0, 1, 1, 0, 0],
+        //               [0, 0, 1, 1, 0, 0, 0, 0, 0, 0],
+        //               [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+        //               [0, 0, 1, 0, 0, 0, 1, 0, 0, 0],
+        //               [0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+        //               [0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+        //               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
         this._minCellToBorn = minCellToBorn;
         this._minCellToStay = minCellToStay;
     }
@@ -39,6 +39,16 @@ class Game{
     set minCellToStay(minCellToStay) {
         if(minCellToStay !== this._minCellToStay){
             this._minCellToStay = minCellToStay;
+        }
+    }
+    set width(width){
+        if(width !== this._width){
+            this._width = width;
+        }
+    }
+    set height(height){
+        if(height !== this._height){
+            this._height = height;
         }
     }
 
@@ -81,5 +91,9 @@ class Game{
         this.cells = newGeneration;
     }
 
+    reinitialize(){
+        this.cells = [];
+        this.cells = Array(this._height).fill().map(() => Array(this._width).fill(0));
+    }
 }
 

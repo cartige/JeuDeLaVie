@@ -12,8 +12,15 @@
     position: relative;
     margin-left: 64.5%;
     margin-right: 35.5%;
-    margin-top: 15%; 
-    z-index: 1;
+    margin-top: 15%;
+}
+
+#close-menu{
+  margin-left: 95%;
+}
+
+#menu-button{
+  position: relative;
 }
 
 .line{
@@ -21,6 +28,10 @@
     border-bottom-color: black;
     border-bottom-style: groove;
     padding-bottom: 5px;
+}
+
+.z-index{
+  z-index: 1;
 }
 
 h3{
@@ -45,7 +56,7 @@ td {
   height: auto;
   margin: auto;
   background-color: rgb(255, 255, 255);
-  border-radius: 7px;
+  border-radius: 2px;
   position: relative;
   top: 4px;
   z-index: 0;

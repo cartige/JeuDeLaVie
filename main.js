@@ -1,23 +1,33 @@
+// let gridHeight = document.querySelector("#grid\-height");
+// let gridWidth = document.querySelector("#grid\-width");
+let gridHeight = document.getElementById('grid-height');
+let gridWidth = document.getElementById('grid-width');
 let grid = new Game(10,10,3,3);
+let closeMenuButton = document.getElementById('close-menu');
+let menuButton = document.getElementById('menu-button');
+let menu = document.getElementById('menu');
 let buttonNext = document.getElementById("next");
 let buttonPlay = document.getElementById("play");
-let buttonfastForward = document.getElementById("fastForward");
+let buttonFastForward = document.getElementById("fastForward");
 let buttonMax = document.getElementById("max");
 let buttonPause = document.getElementById("pause");
 let baseSpeed = 0;
-let table = document.getElementById('game-grid');
-console.log(grid.grid);
-console.log(grid.minCellToBorn);
+let table = document.getElementById("game-grid");
+let gridSize = document.getElementById("grid-size");
+
+
+
 
 
 function drawGrid(){
 
     table.innerHTML = '';
-    let gridHeight = grid.cells.length;
-    for(let i = 0 ; i < gridHeight ; i++){
+    let height = grid.cells.length;
+    console.log(grid.cells.length);
+    for(let i = 0 ; i < height ; i++){
         let newLine = table.insertRow(i);
-        let gridWidth = grid.cells[i].length;
-        for (let j = 0 ; j < gridWidth ; j++){
+        let width = grid.cells[i].length;
+        for (let j = 0 ; j < width ; j++){
             let newCell = newLine.insertCell(j);
             if(grid.cells[i][j]){
                 newCell.classList.add('alive');
@@ -40,17 +50,22 @@ function computeAndDraw(){
     drawGrid();
 }
 
-buttonNext.addEventListener("click", event => {
+function reinitializeAndDraw(){
+    grid.reinitialize();
+    drawGrid();
+}
+
+buttonNext.addEventListener("click", () => {
                                 window.clearInterval(baseSpeed);
                                  computeAndDraw();
                             });
 
-buttonPlay.addEventListener("click", event => {
+buttonPlay.addEventListener("click", () => {
                                 window.clearInterval(baseSpeed)
                                 baseSpeed = setInterval(computeAndDraw, 1000); 
                             });
 
-buttonfastForward.addEventListener("click", event => {
+buttonFastForward.addEventListener("click", () => {
                                         window.clearInterval(baseSpeed)
                                         speed = 500;
                                         if(speed > 100){
@@ -60,15 +75,44 @@ buttonfastForward.addEventListener("click", event => {
                                         
                                     });
 
-buttonMax.addEventListener("click", event => {
+buttonMax.addEventListener("click", () => {
                                 window.clearInterval(baseSpeed);
                                 baseSpeed = setInterval(computeAndDraw, 100);
                             });
 
-buttonPause.addEventListener("click", event => {
+buttonPause.addEventListener("click", () => {
                                 window.clearInterval(baseSpeed);
+                            });
+
+gridSize.addEventListener("click", () => {
+
+                            grid.height = parseInt(gridHeight.value);
+                            grid.width = parseInt(gridWidth.value);
+                            console.log(grid.grid);
+                            console.log(grid.height);
+                            console.log(grid.width);
+                            reinitializeAndDraw();
+                           
+                        });
+                        console.log(grid.height);
+
+closeMenuButton.addEventListener("click", () => {
+                                    menu.classList.remove('z-index');
+                                    menuButton.classList.add('z-index');
+                                })
+
+menuButton.addEventListener("click", () => {
+                                menu.classList.add('z-index');
+                                menuButton.classList.remove('z-index');
                             })
 
-
+// gridHeight.addEventListener("input", () => {
+//     grid.height = parseInt(this.value);
+    
+// })
+// gridWidth.addEventListener("input", () => {
+//     grid.width = parseInt(this.value);
+// })
 
 console.log(grid.nbCellsAlive(1, 2));
+console.log(grid.grid);
