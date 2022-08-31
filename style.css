@@ -26,3 +26,31 @@ h3{
     color: rgba(75, 68, 68, 0.795);
     border-color: rgba(0, 0, 0, 0.541);
 }
+
+table,
+td {
+  font-size: medium;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  padding: 5px;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  background-color: white;
+  border-radius: 7px;
+  position: relative;
+  top: 4px;
+}
+
+table {
+    background: linear-gradient(
+      240deg,
+      rgba(33, 124, 160, 0.7),
+      rgba(79, 28, 161, 0.7)
+    );
+    border-top-right-radius: 10px;
+    position: relative;
+    top: 90px;
+    padding: 2px;
+    padding-bottom: 9px;
+  }
