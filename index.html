@@ -7,7 +7,9 @@
     <title>Jeu de la Vie</title> 
 </head>
 <body>
-    <div id="menu" >
+    <button type="submit" value="menu" id="menu-button">Menu</button>
+    <div id="menu" class="z-index">
+        <button type="submit" value="x" id="close-menu">X</button>
         <h3>Generation: 0 / Nombre de cellules vivantes: 0</h3>
         <br>
         <label for="motif" id="choix-motif">Remplir la grille: </label>
@@ -23,17 +25,17 @@
         <br>
         <div class="line">
             <p>Redimensionner la grille:</p>            
-            <p><input type="number" id="grid-width" name="grid-width" min="0" max="30">x<input type="number" id="grid-heigth" name="grid-heigth" min="0" max="30"></p>
-            <button type="submit" value="Ok" form="dim-grille">Ok</button>
+            <p><input type="number" id="grid-width" name="grid-width" min="0" max="30">x<input type="number" id="grid-height" name="grid-height" min="0" max="30"></p>
+            <button type="submit" value="Ok" id="grid-size">Ok</button>
         </div>
         <br>
         <div class="line">
             <label for="evolution" id="evolution">Evolution: </label>
-            <button type="submit" value="Suivant" name="evolution">SUIVANT</button>
-            <button type="submit" value="Lecture" name="evolution">LECTURE</button>
-            <button type="submit" value="Avance Rapide" name="evolution">AVANCE RAPIDE</button>
-            <button type="submit" value="Vitesse Max" name="evolution">VITESSE MAX</button>
-            <button type="submit" value="Pause" name="evolution">PAUSE</button>
+            <button type="submit" value="Suivant" name="evolution" id="next">SUIVANT</button>
+            <button type="submit" value="Lecture" name="evolution" id="play">LECTURE</button>
+            <button type="submit" value="Avance Rapide" name="evolution" id="fastForward">AVANCE RAPIDE</button>
+            <button type="submit" value="Vitesse Max" name="evolution" id="max">VITESSE MAX</button>
+            <button type="submit" value="Pause" name="evolution" id="pause">PAUSE</button>
             <button type="submit" value="Sauvergarder" name="evolution">SAUVERGARDER</button>
         </div>
         <br>
@@ -50,9 +52,10 @@
         <button type="submit" value="Variante2" name="config">VARIANTE 2</button>
         <button type="submit" value="Variante3" name="config">VARIANTE 3</button>
 
-
     </div>
-    <table>
+    
+    <table id="game-grid">
+        
         <tbody>
             <tr>
                 <td>0</td>
@@ -71,6 +74,7 @@
             </tr>
         </tbody>
     </table>
+
 
     <script src="script.js"></script>
     <script src="main.js"></script>
